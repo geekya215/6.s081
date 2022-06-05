@@ -1,6 +1,6 @@
 # 6.s081-2021
 ## currently completed assignment
-- [ ] Lab util: Unix utilities
+- [x] Lab util: Unix utilities
 - [ ] Lab syscall: System calls
 - [ ] Lab pgtbl: Page tables
 - [ ] Lab traps: Traps
