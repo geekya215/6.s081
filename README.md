@@ -2,7 +2,7 @@
 ## currently completed assignment
 - [x] [Lab util: Unix utilities](https://github.com/geekya215/6.s081/tree/util)
 - [x] [Lab syscall: System calls](https://github.com/geekya215/6.s081/tree/syscall)
-- [ ] Lab pgtbl: Page tables
+- [x] [Lab pgtbl: Page tables](https://github.com/geekya215/6.s081/tree/pgtbl)
 - [ ] Lab traps: Traps
 - [ ] Lab cow: Copy-on-write fork
 - [ ] Lab thread: Multithreading
