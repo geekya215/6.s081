@@ -454,3 +454,24 @@ vmprint(pagetable_t pagetable)
   printf("page table %p\n", pagetable);
   _vmprint(pagetable, 1);
 }
+
+int
+pgaccess(pagetable_t pagetable, uint64 start_va, int page_num, uint64 result_va)
+{
+  uint64 mask = 0;
+  if((page_num > 64) || (page_num < 0))
+    return -1;
+
+  for (int i = 0; i < page_num; ++i) {
+    pte_t *pte = walk(pagetable, start_va + i * PGSIZE, 1);
+    if(*pte & PTE_A){
+      mask |= (1L << i);
+      *pte &= ~PTE_A;
+    }
+  }
+
+  if(copyout(pagetable, result_va, (char *)&mask, sizeof(mask)) < 0)
+    return -1;
+
+  return 0;
+}
